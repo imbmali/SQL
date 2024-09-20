@@ -1,3 +1,5 @@
+SELECT * FROM temp.Customer;
+
 CREATE DATABASE temp;
 
 USE temp;
@@ -21,9 +23,21 @@ VALUES (1001, 'Bhavesh Mali', 'BTM 2nd Phase', 'M', 'Jalandhar', 560071),
        (1006, 'Vishal Arora', 'Ludhiyana H.O', 'M', 'Ludhiyana', NULL),
        (1006, 'Vishal Arora', 'Ludhiyana H.O', 'M', 'Ludhiyana', NULL),
        (1007, 'Dipanshu', 'Ludhiyana H.O', 'M', 'Ludhiyana', NULL);
+       	
+SELECT * FROM Customer;    
+
+
+
+-- FOREIGN KEY Code
+CREATE TABLE ORDER_DETAILS  (
+ORDER_ID INTEGER PRIMARY KEY,
+DELIVERY_DATE DATE,
+CUST_ID INT,
+FOREIGN KEY(CUST_ID) REFERENCES Customer(ID)
+);
+
+
+
+
+ 
        
-       
-       
-SELECT * FROM Customer;       
-       
-        

@@ -106,6 +106,23 @@ SELECT DEPARTMENT, MAX(SALARY) FROM WORKER GROUP By DEPARTMENT;
 -- SUM
 SELECT DEPARTMENT, SUM(SALARY) FROM WORKER GROUP By DEPARTMENT;
 
+-- GROUP BY HAVING
+-- FOR Select we have Where to filter
+-- Group By ke sath we have Having
+
+-- 1. Out of the Categories made by Group By, We would like to know only particular thing(Cond.)
+-- 2. WHERE clause is used to filter rows from the table based on specified condition.
+-- 3. HAVING clause is used to filter the rows from the groups based on specified condition.
+-- 4. Department, count, having more than 2.....
+-- 5. WHERE can be used with SELECT, UPDATE & DELETE keywords while Group By used with SELECT.
+
+SELECT DEPARTMENT, COUNT(DEPARTMENT) FROM WORKER GROUP By DEPARTMENT HAVING COUNT(DEPARTMENT) > 1;
+
+
+-- DDL - Constraints
+-- 1. Primary Key: Not NULL, Only one p_k, Unique
+-- 2. Foreign Key: FK refers to Pk of other table.
+
 
 
 
